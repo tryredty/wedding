@@ -1,22 +1,22 @@
-/* Style global */
+/* Global Reset */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: 'Georgia', serif;
+    overflow-x: hidden;
 }
 
-/* Background de luxe vintage */
+/* Background Vintage */
 body {
     background: url('back1.png') no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
-    background-repeat: no-repeat;
     background-position: center center;
     min-height: 100vh;
 }
 
-/* Overlay pour améliorer la lisibilité */
+/* Voile doux */
 body::before {
     content: "";
     position: fixed;
@@ -24,12 +24,12 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 240, 0.3); /* Voile beige très léger */
+    background: rgba(255, 255, 240, 0.4);
     z-index: -1;
 }
 
-/* Contenu */
-.content {
+/* Animations douces */
+.content, .invitation {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,35 +37,98 @@ body::before {
     text-align: center;
     padding: 20px;
     min-height: 100vh;
-    color: #5c4033; /* Marron vintage */
+    color: #5c4033;
+    opacity: 1;
+    transition: opacity 1s ease;
 }
 
-h1 {
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Formulaire */
+input[type="text"] {
+    padding: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    background-color: #bfa88f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a8917d;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+/* Invitation style */
+.title {
+    font-family: 'Times New Roman', serif;
     font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.date {
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
-p {
-    font-size: 1.2rem;
-    max-width: 600px;
+.lieu {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-/* Responsive Design */
+.message {
+    max-width: 700px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background: rgba(255,255,255,0.8);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.signature {
+    margin-top: 20px;
+    font-style: italic;
+}
+
+/* Responsive Mobile */
 @media (max-width: 768px) {
-    h1 {
+    .title {
         font-size: 2.5rem;
     }
-    p {
+    .date, .lieu {
+        font-size: 1.5rem;
+    }
+    .message {
         font-size: 1rem;
-        padding: 0 10px;
     }
 }
 
 @media (max-width: 480px) {
-    h1 {
+    .title {
         font-size: 2rem;
     }
-    p {
+    .date, .lieu {
+        font-size: 1.2rem;
+    }
+    .message {
         font-size: 0.9rem;
     }
 }
