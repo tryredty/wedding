@@ -1,17 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitation Vintage</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitation Mariage</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="content">
-        <h1>Bienvenue à Notre Événement</h1>
-        <p>Vous êtes chaleureusement invité à célébrer avec nous cette occasion spéciale dans une ambiance élégante et intemporelle.</p>
+  <!-- Formulaire d'accès -->
+  <div id="code-container" class="content">
+    <h1>Quel est le jour de notre première rencontre ?</h1>
+    <input type="text" id="code-input" placeholder="JJ/MM/AAAA">
+    <button id="submit-code">Valider</button>
+    <p id="error-message"></p>
+  </div>
+
+  <!-- Carte d'invitation affichée après validation -->
+  <div id="site-content" class="invitation" style="display: none;">
+    <h1 class="title">Élodie & Thomas</h1>
+
+    <p class="date">Samedi 12 juillet 2025</p>
+
+    <p class="lieu">
+      Hôtel Sarakawa<br>
+      Lomé, Togo
+    </p>
+
+    <div class="message">
+      <p>
+        Nous serions honorés de vous compter parmi nous pour célébrer l'amour, la famille et l'amitié.
+        Votre présence illuminera ce jour si spécial à nos yeux.
+      </p>
+      <p class="signature">
+        Avec tout notre amour,<br>
+        Élodie & Thomas
+      </p>
     </div>
 
+    <!-- Audio du fond sonore -->
+    <audio id="background-music" loop>
+      <source src="piano.mp3" type="audio/mpeg">
+      .
+    </audio>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
