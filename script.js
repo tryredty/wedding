@@ -1,3 +1,20 @@
+// Loader
+window.addEventListener("load", () => {
+    const loader = document.getElementById('loader');
+    const mainSite = document.getElementById('main-site');
+  
+    setTimeout(() => {
+        loader.classList.add('fade-out');
+        setTimeout(() => {
+            loader.style.display = 'none';
+            mainSite.classList.remove('hidden');
+        }, 1000); // attend que l'animation soit finie
+    }, 2000); // garde le loader au moins 2s
+});
+
+
+
+
 let attempts = 0; // Compteur d'essais
 
 document.getElementById('submit-code').addEventListener('click', function() {
