@@ -36,3 +36,19 @@ document.getElementById('code-input').addEventListener('keypress', function(e) {
         document.getElementById('submit-code').click();
     }
 });
+
+
+const toggleBtn = document.getElementById("toggle-message");
+const loveMessage = document.getElementById("love-message");
+
+toggleBtn.addEventListener("click", () => {
+    if (loveMessage.classList.contains("show")) {
+        loveMessage.classList.remove("show");
+        toggleBtn.textContent = "Notre histoire";
+        toggleBtn.classList.add("glow");
+    } else {
+        loveMessage.classList.add("show");
+        toggleBtn.textContent = "Fermer 💌";
+        toggleBtn.classList.remove("glow");
+    }
+});
