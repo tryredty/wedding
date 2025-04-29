@@ -132,3 +132,57 @@ button:hover {
         font-size: 0.9rem;
     }
 }
+
+
+/* Style du bouton Notre Histoire */
+.story-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    background-color: #d8bca3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.story-btn:hover {
+    background-color: #c0a58c;
+}
+
+/* Effet lumineux */
+.glow {
+    box-shadow: 0 0 8px #ffe4c4, 0 0 15px #ffd700, 0 0 20px #ffc107;
+}
+
+/* Conteneur du message */
+#love-message {
+    margin-top: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    background-color: rgba(255, 250, 240, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #d8bca3;
+    color: #5c4033;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease, opacity 1s ease, padding 1s ease;
+}
+
+/* Quand visible */
+#love-message.show {
+    opacity: 1;
+    max-height: 1500px;
+    padding: 30px;
+}
+
+/* Texte du message */
+.message-box p {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
