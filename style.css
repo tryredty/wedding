@@ -272,4 +272,24 @@ button:hover {
   .hidden {
     display: none;
   }
+
+
+
+        .invitation-link {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.invitation-link a {
+  font-size: 1.1rem;
+  color: #5c4033;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.invitation-link a:hover {
+  color: #a67b5b;
+}
+
   
