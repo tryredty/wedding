@@ -55,17 +55,23 @@ document.getElementById('code-input').addEventListener('keypress', function(e) {
 });
 
 
-const toggleBtn = document.getElementById("toggle-message");
-const loveMessage = document.getElementById("love-message");
+// Gestion de la modale "Notre Histoire"
+const openStoryBtn = document.getElementById('open-story');
+const closeStoryBtn = document.getElementById('close-story');
+const storyModal = document.getElementById('story-modal');
 
-toggleBtn.addEventListener("click", () => {
-    if (loveMessage.classList.contains("show")) {
-        loveMessage.classList.remove("show");
-        toggleBtn.textContent = "Notre histoire";
-        toggleBtn.classList.add("glow");
-    } else {
-        loveMessage.classList.add("show");
-        toggleBtn.textContent = "Fermer 💌";
-        toggleBtn.classList.remove("glow");
+openStoryBtn.addEventListener('click', () => {
+    storyModal.style.display = "block";
+});
+
+closeStoryBtn.addEventListener('click', () => {
+    storyModal.style.display = "none";
+});
+
+// Fermer si on clique en dehors de la modale
+window.addEventListener('click', (event) => {
+    if (event.target == storyModal) {
+        storyModal.style.display = "none";
     }
 });
+
