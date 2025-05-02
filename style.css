@@ -335,3 +335,63 @@ button:hover {
   }
 }
 
+
+
+
+
+
+        .modal-content {
+  font-family: 'Georgia', serif;
+  background-color: #fffdf8;
+  color: #3b2e26; /* couleur plus foncée */
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+}
+
+.modal-content p {
+  color: #3b2e26;
+  font-weight: 500;
+}
+
+.modal-content h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #5c4033;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    font-size: 1rem;
+    padding: 20px;
+  }
+
+  .modal-content h2 {
+    font-size: 1.6rem;
+  }
+
+  .modal-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    font-size: 0.95rem;
+    padding: 15px;
+  }
+
+  .modal-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .modal-content h2 {
+    font-size: 1.4rem;
+  }
+}
+
